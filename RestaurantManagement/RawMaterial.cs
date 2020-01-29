@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,9 @@ namespace RestaurantManagement
 {
     public class RawMaterial
     {
+        [Key]
+        public int RawMatlId { get; set; }
+
         public string RawMatlName { get; set; }
 
         public string RawMatlDescription { get; set; }
