@@ -63,10 +63,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202001301907092_AddedTables.cs" />
+    <Compile Include="Migrations\202001301907092_AddedTables.Designer.cs">
+      <DependentUpon>202001301907092_AddedTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RawMaterial.cs" />
     <Compile Include="RestaurantContext.cs" />
+    <EmbeddedResource Include="Migrations\202001301907092_AddedTables.resx">
+      <DependentUpon>202001301907092_AddedTables.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
