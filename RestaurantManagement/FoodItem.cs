@@ -10,7 +10,7 @@ namespace RestaurantManagement
     /// <summary>
     /// FoodItems are food &/or beverage items ready for retail sale. 
     /// </summary>
-    class FoodItems
+    public class FoodItem
     {
         /// <summary>
         /// Food Item Identification Number, Primary Key
