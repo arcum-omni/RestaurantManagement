@@ -24,5 +24,13 @@ namespace RestaurantManagement
         public virtual DbSet<BankAccount> BankAccounts { get; set; }
         public virtual DbSet<RawMaterial> RawMaterials { get; set; }
         public virtual DbSet<FoodItem> FoodItems { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<FoodItem>()
+                .HasMany(e => e.ItemIngredients)
+                .WithRequired(e => e.FoodItem)
+                .WillCascadeOnDelete(false);
+        }
     }
 }
