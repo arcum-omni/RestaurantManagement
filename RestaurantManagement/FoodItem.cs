@@ -32,7 +32,7 @@ namespace RestaurantManagement
         /// <summary>
         /// The item ingredients is a list of raw materials used to create the food item.
         /// </summary>
-        public List<RawMaterial> ItemIngredients { get; set; }
+        public virtual ICollection<RawMaterial> ItemIngredients { get; set; }
 
         /// <summary>
         /// The retail price charged for a food item.
