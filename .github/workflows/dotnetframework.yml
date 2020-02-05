@@ -17,5 +17,3 @@ jobs:
       uses: warrenbuckley/Setup-MSBuild@v1
     - name: Build with MSBuild
       run: msbuild RestaurantManagement.sln -p:Configuration=Release
-        echo Add other actions to build,
-        echo test, and deploy your project.
