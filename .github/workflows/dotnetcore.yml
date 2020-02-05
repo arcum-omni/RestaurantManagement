@@ -12,10 +12,10 @@ jobs:
     - name: Setup Nuget.exe
       uses: warrenbuckley/Setup-Nuget@v1
     - name: Restore packages
-      run: nuget restore arcum-omni/RestaurantManagement.sln
+      run: nuget restore arcum-omni\RestaurantManagement.sln
     - name: Setup MSBuild.exe
       uses: warrenbuckley/Setup-MSBuild@v1
     - name: Build with MSBuild
-      run: msbuild arcum-omni/RestaurantManagement.sln -p:Configuration=Release
+      run: msbuild arcum-omni\RestaurantManagement.sln -p:Configuration=Release
         echo Add other actions to build,
         echo test, and deploy your project.
