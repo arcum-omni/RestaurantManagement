@@ -1,3 +1,4 @@
+![.NET Framework](https://github.com/arcum-omni/RestaurantManagement/workflows/.NET%20Framework/badge.svg)
 ## RestaurantManagement
 CPW 212 Advanced .NET, Winter 2020<br>
 Team Source Control Project<br>
