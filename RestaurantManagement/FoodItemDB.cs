@@ -14,9 +14,10 @@ namespace RestaurantManagement
             using (var context = new RestaurantContext())
             {
                 List<FoodItem> foodItems =
-                    context.FoodItems
-                    .OrderBy(item => item.ItemId)
-                    .ToList();
+                    (from i in context.FoodItems
+                     join r in context.RawMaterials
+                     on i.ItemId equals r.FoodItem.ItemId
+                     select i).ToList();
 
                 return foodItems;
             }
