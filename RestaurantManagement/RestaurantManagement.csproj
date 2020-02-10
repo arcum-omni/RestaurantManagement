@@ -57,6 +57,7 @@
   <ItemGroup>
     <Compile Include="BankAccount.cs" />
     <Compile Include="FoodItem.cs" />
+    <Compile Include="FoodItemDB.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
