@@ -21,8 +21,11 @@ namespace RestaurantManagement
         // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
 
         // public virtual DbSet<MyEntity> MyEntities { get; set; }
+        
         public virtual DbSet<BankAccount> BankAccounts { get; set; }
+
         public virtual DbSet<RawMaterial> RawMaterials { get; set; }
+
         public virtual DbSet<FoodItem> FoodItems { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
