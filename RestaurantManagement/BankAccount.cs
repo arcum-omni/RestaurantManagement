@@ -20,18 +20,19 @@ namespace RestaurantManagement
         public int AccountId { get; set; }
 
         /// <summary>
-        /// The name of the financial account, ie CoGS
+        /// The name of the financial account, IE CoGS
         /// </summary>
+        [Required]
         public string AccountName { get; set; }
 
         /// <summary>
         /// The account description, 
-        /// ie the Cost of Goods Sold, what it costs the restaurant to sell a food item
+        /// IE the Cost of Goods Sold, what it costs the restaurant to sell a food item
         /// </summary>
         public string AccountDescription { get; set; }
 
         /// <summary>
-        /// The account balance, ie how much money is in the account.
+        /// The account balance, IE how much money is in the account.
         /// If the GeneralLedger + DailySales - CoGS < 0 the restaurant is bankrupt.
         /// </summary>
         public decimal AccountBalance { get; set; }
