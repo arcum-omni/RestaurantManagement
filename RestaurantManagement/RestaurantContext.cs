@@ -27,7 +27,7 @@ namespace RestaurantManagement
         // public virtual DbSet<MyEntity> MyEntities { get; set; }
         #endregion
 
-        public virtual DbSet<BankAccount> BankAccounts { get; set; }
+        public virtual DbSet<FinancialAccount> FinancialAccounts { get; set; }
 
         public virtual DbSet<RawMaterial> RawMaterials { get; set; }
 

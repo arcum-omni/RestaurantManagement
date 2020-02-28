@@ -8,32 +8,31 @@ using System.Threading.Tasks;
 namespace RestaurantManagement
 {
     /// <summary>
-    /// Bank Accounts are financial accounts used to track money (sales & costs) for the restaurant.
-    /// Examples of accounts include DailySales, CoGS(Cost of Goods Sold), & the GeneralLedger.
+    /// Financial accounts used to track funds (credits & debits) for the restaurant.
+    /// Examples of accounts include DailySales, CoGS(Cost of Goods Sold), & the Accounts Payable.
     /// </summary>
-    public class BankAccount
+    public class FinancialAccount
     {
         /// <summary>
-        /// Bank Account Identification Number, Primary Key
+        /// Financial Account Identification Number, Primary Key
         /// </summary>
         [Key]
         public int AccountId { get; set; }
 
         /// <summary>
-        /// The name of the financial account, IE CoGS
+        /// The name of the financial account: IE Accounts Payable (AP)
         /// </summary>
         [Required]
         public string AccountName { get; set; }
 
         /// <summary>
         /// The account description, 
-        /// IE the Cost of Goods Sold, what it costs the restaurant to sell a food item
+        /// IE AP is money owed by a business to its suppliers shown as a liability on a company's balance sheet.
         /// </summary>
         public string AccountDescription { get; set; }
 
         /// <summary>
-        /// The account balance, IE how much money is in the account.
-        /// If the GeneralLedger + DailySales - CoGS < 0 the restaurant is bankrupt.
+        /// The account balance, IE how much money is in the account for a specific purpose.
         /// </summary>
         public decimal AccountBalance { get; set; }
     }
