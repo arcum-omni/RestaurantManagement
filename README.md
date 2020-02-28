@@ -4,7 +4,7 @@ CPW 212 Advanced .NET, Winter 2020<br>
 Team Source Control Project<br>
 
 Description:
-- An application help food service vendors manage inventory, from raw materials to finished goods.
+- An application to help food service vendors manage inventory, from raw materials to finished goods.
 - More details to follow
 
 Instructor:
