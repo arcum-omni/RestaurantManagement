@@ -55,8 +55,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BankAccount.cs" />
-    <Compile Include="BankAccountDB.cs" />
+    <Compile Include="FinancialAccount.cs" />
+    <Compile Include="FinancialAccountDB.cs" />
     <Compile Include="FoodItem.cs" />
     <Compile Include="FoodItemDB.cs" />
     <Compile Include="Form1.cs">
@@ -73,6 +73,10 @@
     <Compile Include="Migrations\202002032155151_FixedFoodItem.Designer.cs">
       <DependentUpon>202002032155151_FixedFoodItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002280200290_ChangeFinAccountTable.cs" />
+    <Compile Include="Migrations\202002280200290_ChangeFinAccountTable.Designer.cs">
+      <DependentUpon>202002280200290_ChangeFinAccountTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -87,6 +91,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002032155151_FixedFoodItem.resx">
       <DependentUpon>202002032155151_FixedFoodItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002280200290_ChangeFinAccountTable.resx">
+      <DependentUpon>202002280200290_ChangeFinAccountTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

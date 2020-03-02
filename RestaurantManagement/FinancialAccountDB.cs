@@ -7,22 +7,22 @@ using System.Threading.Tasks;
 
 namespace RestaurantManagement
 {
-    public static class BankAccountDB
+    public static class FinancialAccountDB
     {
         /// <summary>
-        /// Returns a list of all bank/financial accounts,
-        /// sorted by account number, in ascending order.
+        /// Returns a list of all financial accounts,
+        /// sorted by AccountId, in ascending order.
         /// </summary>
         /// <returns></returns>
-        public static List<BankAccount> GetBankAccounts()
+        public static List<FinancialAccount> GetAllFinancialAccounts()
         {
             using (var context = new RestaurantContext())
             {
-                List<BankAccount> bankAccounts = (from ba in context.BankAccounts
-                                                  orderby ba.AccountId ascending
-                                                  select ba).ToList();
+                List<FinancialAccount> acc = (from fa in context.FinancialAccounts 
+                                              orderby fa.AccountId ascending
+                                              select fa).ToList();
 
-                return bankAccounts;
+                return acc;
             }
         }
 
@@ -31,11 +31,27 @@ namespace RestaurantManagement
         /// </summary>
         /// <param name="acc"></param>
         /// <returns></returns>
-        public static BankAccount Add(BankAccount acc)
+        public static FinancialAccount Add(FinancialAccount acc)
         {
             using (var context = new RestaurantContext())
             {
-                context.BankAccounts.Add(acc);
+                context.FinancialAccounts.Add(acc);
+                context.SaveChanges();
+            }
+            return acc;
+        }
+
+        /// <summary>
+        /// Updates/Edits all financial account data, except for PK
+        /// </summary>
+        /// <param name="acc"></param>
+        /// <returns></returns>
+        public static FinancialAccount Update(FinancialAccount acc)
+        {
+            using (var context = new RestaurantContext())
+            {
+                context.FinancialAccounts.Attach(acc);
+                context.Entry(acc).State = EntityState.Modified;
                 context.SaveChanges();
             }
             return acc;
@@ -45,30 +61,14 @@ namespace RestaurantManagement
         /// Deletes a financial account from the DB
         /// </summary>
         /// <param name="acc"></param>
-        public static void Delete(BankAccount acc)
+        public static void Delete(FinancialAccount acc)
         {
             using (var context = new RestaurantContext())
             {
-                context.BankAccounts.Attach(acc);
+                context.FinancialAccounts.Attach(acc);
                 context.Entry(acc).State = EntityState.Deleted;
                 context.SaveChanges();
             }
-        }
-
-        /// <summary>
-        /// Updates/Edits all financial account data, except for PK
-        /// </summary>
-        /// <param name="acc"></param>
-        /// <returns></returns>
-        public static BankAccount Update(BankAccount acc)
-        {
-            using (var context = new RestaurantContext())
-            {
-                context.BankAccounts.Attach(acc);
-                context.Entry(acc).State = EntityState.Modified;
-                context.SaveChanges();
-            }
-            return acc;
         }
     }
 }
