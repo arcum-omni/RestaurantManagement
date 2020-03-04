@@ -59,11 +59,11 @@
     <Compile Include="FinancialAccountDB.cs" />
     <Compile Include="FoodItem.cs" />
     <Compile Include="FoodItemDB.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="frmHomeScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmHomeScreen.Designer.cs">
+      <DependentUpon>frmHomeScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202001301907092_AddedTables.cs" />
     <Compile Include="Migrations\202001301907092_AddedTables.Designer.cs">
@@ -83,8 +83,8 @@
     <Compile Include="RawMaterial.cs" />
     <Compile Include="RawMaterialDB.cs" />
     <Compile Include="RestaurantContext.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="frmHomeScreen.resx">
+      <DependentUpon>frmHomeScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202001301907092_AddedTables.resx">
       <DependentUpon>202001301907092_AddedTables.cs</DependentUpon>
