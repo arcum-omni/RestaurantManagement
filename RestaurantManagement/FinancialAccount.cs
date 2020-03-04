@@ -34,6 +34,6 @@ namespace RestaurantManagement
         /// <summary>
         /// The account balance, IE how much money is in the account for a specific purpose.
         /// </summary>
-        public decimal AccountBalance { get; set; }
+        public decimal AccountBalance { get; private set; }
     }
 }
