@@ -37,6 +37,6 @@ namespace RestaurantManagement
         /// <summary>
         /// The retail price charged for a food item.
         /// </summary>
-        public double ItemPrice { get; set; }
+        public decimal ItemPrice { get; set; }
     }
 }
