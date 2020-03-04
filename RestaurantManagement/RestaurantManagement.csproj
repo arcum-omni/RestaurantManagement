@@ -57,6 +57,12 @@
   <ItemGroup>
     <Compile Include="FinancialAccount.cs" />
     <Compile Include="FinancialAccountDB.cs" />
+    <Compile Include="frmFinAccManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFinAccManager.Designer.cs">
+      <DependentUpon>frmFinAccManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="FoodItem.cs" />
     <Compile Include="FoodItemDB.cs" />
     <Compile Include="Form1.cs">
@@ -87,6 +93,9 @@
     <Compile Include="RawMaterial.cs" />
     <Compile Include="RawMaterialDB.cs" />
     <Compile Include="RestaurantContext.cs" />
+    <EmbeddedResource Include="frmFinAccManager.resx">
+      <DependentUpon>frmFinAccManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
