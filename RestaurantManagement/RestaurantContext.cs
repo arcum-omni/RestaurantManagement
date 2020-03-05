@@ -33,12 +33,12 @@ namespace RestaurantManagement
 
         public virtual DbSet<FoodItem> FoodItems { get; set; }
 
+        public virtual DbSet<ItemMatl> ItemMatls { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<FoodItem>()
-                .HasMany(e => e.ItemIngredients)
-                .WithRequired(e => e.FoodItem)
-                .WillCascadeOnDelete(false);
+            modelBuilder.Entity<ItemMatl>()
+                .HasKey(x => new { x.ItemId, x.RawMatlId });
         }
     }
 }

@@ -15,11 +15,45 @@ namespace RestaurantManagement
             {
                 List<FoodItem> foodItems =
                     (from i in context.FoodItems
-                     join r in context.RawMaterials
-                     on i.ItemId equals r.FoodItem.ItemId
                      select i).ToList();
+                foreach (FoodItem item in foodItems)
+                {
+                    item.ItemIngredients = GetItemIngredients(item.ItemId);
+                }
 
                 return foodItems;
+            }
+        }
+
+        public static List<RawMaterial> GetItemIngredients(int itemId)
+        {
+            using (var context = new RestaurantContext())
+            {
+                List<RawMaterial> ingredients =
+                    (from r in context.RawMaterials
+                     join im in context.ItemMatl
+                     on r.RawMatlId equals im.RawMatlId
+                     join i in context.FoodItems
+                     on im.ItemId equals im.ItemId
+                     where i.ItemId == itemId
+                     select r).ToList();
+
+                return ingredients;
+            }
+        }
+
+        public static List<ItemMatl> GetItemMatl(int itemId)
+        {
+            using (var context = new RestaurantContext())
+            {
+                List<ItemMatl> itemMatls =
+                    (from im in context.ItemMatl
+                     join i in context.FoodItems
+                     on im.ItemId equals i.ItemId
+                     where i.ItemId == itemId
+                     select im).ToList();
+
+                return itemMatls;
             }
         }
 
@@ -28,6 +62,10 @@ namespace RestaurantManagement
             using (var context = new RestaurantContext())
             {
                 context.FoodItems.Add(item);
+                foreach (RawMaterial material in item.ItemIngredients)
+                {
+                    context.ItemMatl.Add();
+                }
                 context.SaveChanges();
 
                 return item;

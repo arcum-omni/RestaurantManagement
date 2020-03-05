@@ -71,6 +71,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ItemMatl.cs" />
     <Compile Include="Migrations\202001301907092_AddedTables.cs" />
     <Compile Include="Migrations\202001301907092_AddedTables.Designer.cs">
       <DependentUpon>202001301907092_AddedTables.cs</DependentUpon>
