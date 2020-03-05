@@ -38,7 +38,7 @@
             this.txt_AccBalance = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnCreate = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -118,31 +118,32 @@
             // 
             // btnCreate
             // 
-            this.btnCreate.Location = new System.Drawing.Point(50, 300);
+            this.btnCreate.Location = new System.Drawing.Point(70, 300);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(150, 50);
             this.btnCreate.TabIndex = 9;
             this.btnCreate.Text = "Create";
             this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
-            // btnCancel
+            // btnClose
             // 
-            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(272, 300);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(150, 50);
-            this.btnCancel.TabIndex = 10;
-            this.btnCancel.Text = "Create";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnClose.Location = new System.Drawing.Point(252, 300);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(150, 50);
+            this.btnClose.TabIndex = 10;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // frmFinAccManager
             // 
             this.AcceptButton = this.btnCreate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(483, 400);
-            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txt_AccBalance);
@@ -173,6 +174,6 @@
         private System.Windows.Forms.TextBox txt_AccBalance;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnCreate;
-        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnClose;
     }
 }
