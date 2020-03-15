@@ -26,13 +26,13 @@ namespace RestaurantManagement
         /// <summary>
         /// The description of the food item,
         /// ie Our cinnamon rolls consist of a rolled sheet of yeast-leavened dough onto which a cinnamon and sugar mixture is sprinkled over a thin coat of butter. The dough is then rolled, cut into individual portions, and baked or deep fried.
-        /// </summary>
+        /// </summary>RawMaterial
         public string ItemDescription { get; set; }
 
         /// <summary>
         /// The item ingredients is a list of raw materials used to create the food item.
         /// </summary>
-        public virtual ICollection<RawMaterial> ItemIngredients { get; set; }
+        public virtual ICollection<ItemMatl> ItemMatls { get; set; }
 
         /// <summary>
         /// The retail price charged for a food item.

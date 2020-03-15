@@ -37,5 +37,7 @@ namespace RestaurantManagement
         /// Raw Material Cost, this property is used to calculate Cost of Goods Sold (CoGS).
         /// </summary>
         public decimal RawMatlCost { get; set; }
+
+        public virtual ICollection<ItemMatl> ItemMatls { get; set; }
     }
 }

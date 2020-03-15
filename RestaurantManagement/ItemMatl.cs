@@ -8,12 +8,14 @@ using System.Threading.Tasks;
 
 namespace RestaurantManagement
 {
-    class ItemMatl
+    public class ItemMatl
     {
         [ForeignKey("FoodItem")]
         public int ItemId { get; set; }
+        public FoodItem FoodItem { get; set; }
 
         [ForeignKey("RawMaterial")]
         public int RawMatlId { get; set; }
+        public RawMaterial RawMaterial { get; set; }
     }
 }
