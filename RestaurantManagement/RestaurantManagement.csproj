@@ -88,6 +88,10 @@
     <Compile Include="Migrations\202003041825395_FinDataTypes.Designer.cs">
       <DependentUpon>202003041825395_FinDataTypes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003152144427_FixFoodItemDB.cs" />
+    <Compile Include="Migrations\202003152144427_FixFoodItemDB.Designer.cs">
+      <DependentUpon>202003152144427_FixFoodItemDB.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -111,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003041825395_FinDataTypes.resx">
       <DependentUpon>202003041825395_FinDataTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003152144427_FixFoodItemDB.resx">
+      <DependentUpon>202003152144427_FixFoodItemDB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
