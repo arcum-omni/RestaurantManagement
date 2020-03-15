@@ -16,9 +16,10 @@ namespace RestaurantManagement
                 List<FoodItem> foodItems =
                     (from i in context.FoodItems
                      select i).ToList();
+
                 foreach (FoodItem item in foodItems)
                 {
-                    item.ItemIngredients = GetItemIngredients(item.ItemId);
+                    item.ItemMatls = GetItemMatl(item.ItemId);
                 }
 
                 return foodItems;
@@ -31,23 +32,21 @@ namespace RestaurantManagement
             {
                 List<RawMaterial> ingredients =
                     (from r in context.RawMaterials
-                     join im in context.ItemMatl
+                     join im in context.ItemMatls
                      on r.RawMatlId equals im.RawMatlId
-                     join i in context.FoodItems
-                     on im.ItemId equals im.ItemId
-                     where i.ItemId == itemId
+                     where im.ItemId == itemId
                      select r).ToList();
 
                 return ingredients;
             }
         }
 
-        public static List<ItemMatl> GetItemMatl(int itemId)
+        public static ICollection<ItemMatl> GetItemMatl(int itemId)
         {
             using (var context = new RestaurantContext())
             {
-                List<ItemMatl> itemMatls =
-                    (from im in context.ItemMatl
+                ICollection<ItemMatl> itemMatls =
+                    (from im in context.ItemMatls
                      join i in context.FoodItems
                      on im.ItemId equals i.ItemId
                      where i.ItemId == itemId
@@ -61,10 +60,11 @@ namespace RestaurantManagement
         {
             using (var context = new RestaurantContext())
             {
+
                 context.FoodItems.Add(item);
-                foreach (RawMaterial material in item.ItemIngredients)
+                foreach (ItemMatl itemMatl in item.ItemMatls)
                 {
-                    context.ItemMatl.Add();
+                    context.ItemMatls.Add(itemMatl);
                 }
                 context.SaveChanges();
 
@@ -78,6 +78,11 @@ namespace RestaurantManagement
             {
                 context.FoodItems.Attach(item);
                 context.Entry(item).State = EntityState.Deleted;
+                foreach (ItemMatl itemMatl in item.ItemMatls)
+                {
+                    context.ItemMatls.Attach(itemMatl);
+                    context.Entry(itemMatl).State = EntityState.Deleted;
+                }
                 context.SaveChanges();
             }
         }
@@ -88,6 +93,11 @@ namespace RestaurantManagement
             {
                 context.FoodItems.Attach(item);
                 context.Entry(item).State = EntityState.Modified;
+                foreach (ItemMatl itemMatl in item.ItemMatls)
+                {
+                    context.ItemMatls.Attach(itemMatl);
+                    context.Entry(itemMatl).State = EntityState.Modified;
+                }
                 context.SaveChanges();
 
                 return item;
