@@ -38,6 +38,6 @@ namespace RestaurantManagement
         /// </summary>
         public decimal RawMatlCost { get; set; }
 
-        public virtual FoodItem FoodItem { get; set; }
+        public virtual ICollection<ItemMatl> ItemMatls { get; set; }
     }
 }
