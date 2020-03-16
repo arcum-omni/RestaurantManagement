@@ -26,7 +26,7 @@ namespace RestaurantManagement
         /// <summary>
         /// The description of the food item,
         /// ie Our cinnamon rolls consist of a rolled sheet of yeast-leavened dough onto which a cinnamon and sugar mixture is sprinkled over a thin coat of butter. The dough is then rolled, cut into individual portions, and baked or deep fried.
-        /// </summary>RawMaterial
+        /// </summary>
         public string ItemDescription { get; set; }
 
         /// <summary>
