@@ -24,7 +24,10 @@ namespace RestaurantManagement
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            // create account
+            FinancialAccount temp = new FinancialAccount();
+            temp.AccountName = txt_AccName.Text;
+            temp.AccountDescription = txt_AccDescription.Text;
+            FinancialAccountDB.Add(temp);
         }
 
         private void btnClose_Click(object sender, EventArgs e)
