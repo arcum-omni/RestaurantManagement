@@ -19,10 +19,11 @@ namespace RestaurantManagement
 
         private void frmFinAccManager_Load(object sender, EventArgs e)
         {
-
+            var tempList = FinancialAccountDB.GetAllFinancialAccounts().ToList();
+            lst_ExistingAccounts.DataSource = tempList;
         }
 
-        private void btnCreate_Click(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
             FinancialAccount temp = new FinancialAccount();
             temp.AccountName = txt_AccName.Text;
@@ -37,6 +38,11 @@ namespace RestaurantManagement
             this.Hide();
             myForm.ShowDialog();
             this.Close();
+        }
+
+        private void lst_ExistingAccounts_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
