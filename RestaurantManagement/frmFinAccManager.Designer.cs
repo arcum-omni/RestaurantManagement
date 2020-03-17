@@ -37,8 +37,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txt_AccBalance = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnCreate = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.lst_ExistingAccounts = new System.Windows.Forms.ListBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnSelect = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -116,35 +119,66 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Financial Accounts Manager";
             // 
-            // btnCreate
+            // btnSave
             // 
-            this.btnCreate.Location = new System.Drawing.Point(70, 300);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(150, 50);
-            this.btnCreate.TabIndex = 9;
-            this.btnCreate.Text = "Create";
-            this.btnCreate.UseVisualStyleBackColor = true;
-            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
+            this.btnSave.Location = new System.Drawing.Point(70, 300);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(150, 60);
+            this.btnSave.TabIndex = 9;
+            this.btnSave.Text = "Save / Create";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClose
             // 
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnClose.Location = new System.Drawing.Point(252, 300);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(150, 50);
+            this.btnClose.Size = new System.Drawing.Size(150, 60);
             this.btnClose.TabIndex = 10;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // lst_ExistingAccounts
+            // 
+            this.lst_ExistingAccounts.FormattingEnabled = true;
+            this.lst_ExistingAccounts.ItemHeight = 20;
+            this.lst_ExistingAccounts.Location = new System.Drawing.Point(54, 454);
+            this.lst_ExistingAccounts.Name = "lst_ExistingAccounts";
+            this.lst_ExistingAccounts.Size = new System.Drawing.Size(368, 164);
+            this.lst_ExistingAccounts.TabIndex = 11;
+            this.lst_ExistingAccounts.SelectedIndexChanged += new System.EventHandler(this.lst_ExistingAccounts_SelectedIndexChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(50, 428);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(139, 20);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Existing Accounts:";
+            // 
+            // btnSelect
+            // 
+            this.btnSelect.Location = new System.Drawing.Point(151, 644);
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Size = new System.Drawing.Size(150, 60);
+            this.btnSelect.TabIndex = 13;
+            this.btnSelect.Text = "Edit Selected Account";
+            this.btnSelect.UseVisualStyleBackColor = true;
+            // 
             // frmFinAccManager
             // 
-            this.AcceptButton = this.btnCreate;
+            this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(483, 400);
+            this.ClientSize = new System.Drawing.Size(483, 746);
+            this.Controls.Add(this.btnSelect);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lst_ExistingAccounts);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.btnCreate);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txt_AccBalance);
             this.Controls.Add(this.label4);
@@ -173,7 +207,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_AccBalance;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnCreate;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.ListBox lst_ExistingAccounts;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnSelect;
     }
 }
