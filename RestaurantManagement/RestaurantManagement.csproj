@@ -71,6 +71,7 @@
     <Compile Include="frmHomeScreen.Designer.cs">
       <DependentUpon>frmHomeScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="ItemMatl.cs" />
     <Compile Include="Migrations\202001301907092_AddedTables.cs" />
     <Compile Include="Migrations\202001301907092_AddedTables.Designer.cs">
       <DependentUpon>202001301907092_AddedTables.cs</DependentUpon>
@@ -86,6 +87,10 @@
     <Compile Include="Migrations\202003041825395_FinDataTypes.cs" />
     <Compile Include="Migrations\202003041825395_FinDataTypes.Designer.cs">
       <DependentUpon>202003041825395_FinDataTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003152144427_FixFoodItemDB.cs" />
+    <Compile Include="Migrations\202003152144427_FixFoodItemDB.Designer.cs">
+      <DependentUpon>202003152144427_FixFoodItemDB.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
@@ -110,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003041825395_FinDataTypes.resx">
       <DependentUpon>202003041825395_FinDataTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003152144427_FixFoodItemDB.resx">
+      <DependentUpon>202003152144427_FixFoodItemDB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
