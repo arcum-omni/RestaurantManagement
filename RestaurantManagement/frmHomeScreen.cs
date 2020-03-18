@@ -16,5 +16,11 @@ namespace RestaurantManagement
         {
             InitializeComponent();
         }
+
+        private void btnPointOfSale_Click(object sender, EventArgs e)
+        {
+            frmPointOfSale pointOfSale = new frmPointOfSale();
+            pointOfSale.ShowDialog();
+        }
     }
 }
