@@ -110,6 +110,9 @@
     <EmbeddedResource Include="frmFinAccManager.resx">
       <DependentUpon>frmFinAccManager.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPointOfSale.resx">
+      <DependentUpon>frmPointOfSale.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202001301907092_AddedTables.resx">
       <DependentUpon>202001301907092_AddedTables.cs</DependentUpon>
     </EmbeddedResource>

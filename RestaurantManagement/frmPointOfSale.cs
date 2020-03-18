@@ -16,5 +16,15 @@ namespace RestaurantManagement
         {
             InitializeComponent();
         }
+
+        private void frmPointOfSale_Load(object sender, EventArgs e)
+        {
+            ICollection<FoodItem> foodItems = FoodItemDB.GetAllFoodItems();
+
+            foreach (FoodItem item in foodItems)
+            {
+                lbxSaleItem.Items.Add(item.ItemName);
+            }
+        }
     }
 }
