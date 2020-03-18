@@ -23,7 +23,21 @@ namespace RestaurantManagement
 
             foreach (FoodItem item in foodItems)
             {
-                lbxSaleItem.Items.Add(item.ItemName);
+                lbxSaleItem.Items.Add(item);
+            }
+        }
+
+        private void btnSell_Click(object sender, EventArgs e)
+        {
+            // TODO: lower item quantity
+
+            // Get item ingradients and lower their quantity
+            FoodItem currItem = (FoodItem)lbxSaleItem.SelectedItem;
+            ICollection<RawMaterial> itemIngredients = FoodItemDB.GetItemIngredients(currItem.ItemId);
+
+            foreach (RawMaterial item in itemIngredients)
+            {
+                // TODO: Lower quantity
             }
         }
     }
