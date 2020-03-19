@@ -48,90 +48,90 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 65);
+            this.label1.Location = new System.Drawing.Point(50, 75);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 13);
+            this.label1.Size = new System.Drawing.Size(93, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Account ID:";
             // 
             // txt_AccID
             // 
             this.txt_AccID.Enabled = false;
-            this.txt_AccID.Location = new System.Drawing.Point(150, 63);
-            this.txt_AccID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_AccID.Location = new System.Drawing.Point(209, 72);
+            this.txt_AccID.Margin = new System.Windows.Forms.Padding(2);
             this.txt_AccID.Name = "txt_AccID";
-            this.txt_AccID.Size = new System.Drawing.Size(133, 20);
+            this.txt_AccID.Size = new System.Drawing.Size(202, 26);
             this.txt_AccID.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 97);
+            this.label2.Location = new System.Drawing.Point(50, 110);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 13);
+            this.label2.Size = new System.Drawing.Size(118, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Account Name:";
             // 
             // txt_AccName
             // 
-            this.txt_AccName.Location = new System.Drawing.Point(150, 94);
-            this.txt_AccName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_AccName.Location = new System.Drawing.Point(209, 107);
+            this.txt_AccName.Margin = new System.Windows.Forms.Padding(2);
             this.txt_AccName.Name = "txt_AccName";
-            this.txt_AccName.Size = new System.Drawing.Size(133, 20);
+            this.txt_AccName.Size = new System.Drawing.Size(202, 26);
             this.txt_AccName.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 130);
+            this.label3.Location = new System.Drawing.Point(50, 145);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 13);
+            this.label3.Size = new System.Drawing.Size(156, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Account Description:";
             // 
             // txt_AccDescription
             // 
-            this.txt_AccDescription.Location = new System.Drawing.Point(150, 128);
-            this.txt_AccDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_AccDescription.Location = new System.Drawing.Point(209, 142);
+            this.txt_AccDescription.Margin = new System.Windows.Forms.Padding(2);
             this.txt_AccDescription.Name = "txt_AccDescription";
-            this.txt_AccDescription.Size = new System.Drawing.Size(133, 20);
+            this.txt_AccDescription.Size = new System.Drawing.Size(202, 26);
             this.txt_AccDescription.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(33, 162);
+            this.label4.Location = new System.Drawing.Point(50, 180);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 13);
+            this.label4.Size = new System.Drawing.Size(134, 20);
             this.label4.TabIndex = 6;
             this.label4.Text = "Account Balance:";
             // 
             // txt_AccBalance
             // 
-            this.txt_AccBalance.Location = new System.Drawing.Point(150, 161);
-            this.txt_AccBalance.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_AccBalance.Location = new System.Drawing.Point(209, 177);
+            this.txt_AccBalance.Margin = new System.Windows.Forms.Padding(2);
             this.txt_AccBalance.Name = "txt_AccBalance";
-            this.txt_AccBalance.Size = new System.Drawing.Size(133, 20);
+            this.txt_AccBalance.Size = new System.Drawing.Size(202, 26);
             this.txt_AccBalance.TabIndex = 7;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(45, 19);
+            this.label5.Location = new System.Drawing.Point(50, 25);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(236, 20);
+            this.label5.Size = new System.Drawing.Size(340, 29);
             this.label5.TabIndex = 8;
             this.label5.Text = "Financial Accounts Manager";
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(70, 300);
+            this.btnSave.Location = new System.Drawing.Point(70, 231);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(150, 60);
             this.btnSave.TabIndex = 9;
@@ -142,7 +142,7 @@
             // btnClose
             // 
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.Location = new System.Drawing.Point(252, 300);
+            this.btnClose.Location = new System.Drawing.Point(252, 231);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(150, 60);
             this.btnClose.TabIndex = 10;
@@ -153,7 +153,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(50, 425);
+            this.label6.Location = new System.Drawing.Point(50, 356);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(139, 20);
             this.label6.TabIndex = 12;
@@ -161,7 +161,7 @@
             // 
             // btnSelect
             // 
-            this.btnSelect.Location = new System.Drawing.Point(150, 500);
+            this.btnSelect.Location = new System.Drawing.Point(70, 429);
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.Size = new System.Drawing.Size(150, 60);
             this.btnSelect.TabIndex = 13;
@@ -172,14 +172,14 @@
             // CboAccounts
             // 
             this.CboAccounts.FormattingEnabled = true;
-            this.CboAccounts.Location = new System.Drawing.Point(50, 450);
+            this.CboAccounts.Location = new System.Drawing.Point(50, 381);
             this.CboAccounts.Name = "CboAccounts";
             this.CboAccounts.Size = new System.Drawing.Size(368, 28);
             this.CboAccounts.TabIndex = 14;
             // 
             // btnDeleteAcc
             // 
-            this.btnDeleteAcc.Location = new System.Drawing.Point(150, 600);
+            this.btnDeleteAcc.Location = new System.Drawing.Point(252, 429);
             this.btnDeleteAcc.Name = "btnDeleteAcc";
             this.btnDeleteAcc.Size = new System.Drawing.Size(150, 60);
             this.btnDeleteAcc.TabIndex = 15;
@@ -192,7 +192,7 @@
             this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(483, 844);
+            this.ClientSize = new System.Drawing.Size(483, 549);
             this.Controls.Add(this.btnDeleteAcc);
             this.Controls.Add(this.CboAccounts);
             this.Controls.Add(this.btnSelect);
@@ -208,7 +208,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_AccID);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmFinAccManager";
             this.Text = "Accounts Manager";
             this.Load += new System.EventHandler(this.frmFinAccManager_Load);

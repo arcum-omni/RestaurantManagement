@@ -17,11 +17,6 @@ namespace RestaurantManagement
             InitializeComponent();
         }
 
-        private void btnPointOfSale_Click(object sender, EventArgs e)
-        {
-            // open point of sale form
-        }
-
         private void btnInventoryControl_Click(object sender, EventArgs e)
         {
             // open inventory control form
