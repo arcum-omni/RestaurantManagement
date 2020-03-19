@@ -13,7 +13,7 @@ Instructor:
 - Joe Ortiz
 
 Contributors:
-- Ethan Martino
+- Ethan Martino, [Project Summary](https://github.com/arcum-omni/RestaurantManagement/blob/master/EthanSummary.md)
 - Travis Eiler, [Project Summary](https://github.com/arcum-omni/RestaurantManagement/blob/master/TravisSummary.md)
 
 ## Team Project Requirements:
