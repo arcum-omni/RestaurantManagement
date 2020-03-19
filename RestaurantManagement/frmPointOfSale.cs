@@ -31,14 +31,17 @@ namespace RestaurantManagement
         {
             // TODO: lower item quantity
 
-            // Get item ingradients and lower their quantity
+            // Get item ingredients and lower their quantity
             FoodItem currItem = (FoodItem)lbxSaleItem.SelectedItem;
             ICollection<RawMaterial> itemIngredients = FoodItemDB.GetItemIngredients(currItem.ItemId);
 
             foreach (RawMaterial item in itemIngredients)
             {
                 // TODO: Lower quantity
+                // TODO: Update Accounts
             }
+
+            // TODO: Update Accounts for sale
         }
     }
 }
