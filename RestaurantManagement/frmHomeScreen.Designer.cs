@@ -97,6 +97,7 @@
             this.btnSignIn.TabIndex = 5;
             this.btnSignIn.Text = "SIGN IN";
             this.btnSignIn.UseVisualStyleBackColor = true;
+            this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
             // 
             // btnPointOfSale
             // 
@@ -118,6 +119,7 @@
             this.btnInventoryControl.TabIndex = 8;
             this.btnInventoryControl.Text = "Inventory Control";
             this.btnInventoryControl.UseVisualStyleBackColor = true;
+            this.btnInventoryControl.Click += new System.EventHandler(this.btnInventoryControl_Click);
             // 
             // btnFinAccounts
             // 
@@ -128,6 +130,7 @@
             this.btnFinAccounts.TabIndex = 9;
             this.btnFinAccounts.Text = "Financial Accounts";
             this.btnFinAccounts.UseVisualStyleBackColor = true;
+            this.btnFinAccounts.Click += new System.EventHandler(this.btnFinAccounts_Click);
             // 
             // btnUserProfiles
             // 
@@ -138,6 +141,7 @@
             this.btnUserProfiles.TabIndex = 10;
             this.btnUserProfiles.Text = "User Profiles";
             this.btnUserProfiles.UseVisualStyleBackColor = true;
+            this.btnUserProfiles.Click += new System.EventHandler(this.btnUserProfiles_Click);
             // 
             // btnSignOut
             // 
@@ -149,6 +153,7 @@
             this.btnSignOut.TabIndex = 6;
             this.btnSignOut.Text = "SIGN OUT";
             this.btnSignOut.UseVisualStyleBackColor = true;
+            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
             // 
             // frmHomeScreen
             // 

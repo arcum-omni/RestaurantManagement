@@ -65,6 +65,7 @@ namespace RestaurantManagement
         {
             using (var context = new RestaurantContext())
             {
+                // TODO:  Complete Delete functionality
                 context.FinancialAccounts.Attach(acc);
                 context.Entry(acc).State = EntityState.Deleted;
                 context.SaveChanges();
