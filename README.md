@@ -14,7 +14,7 @@ Instructor:
 
 Contributors:
 - Ethan Martino
-- Travis Eiler
+- Travis Eiler, [Project Summary](https://github.com/arcum-omni/RestaurantManagement/blob/master/TravisSummary.md)
 
 ## Team Project Requirements:
 **Phase One:**
