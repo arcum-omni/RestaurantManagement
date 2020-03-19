@@ -38,5 +38,10 @@ namespace RestaurantManagement
         /// The retail price charged for a food item.
         /// </summary>
         public decimal ItemPrice { get; set; }
+
+        public override string ToString()
+        {
+            return ItemName + "  $" + ItemPrice.ToString();
+        }
     }
 }
