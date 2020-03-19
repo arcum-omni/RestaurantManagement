@@ -39,9 +39,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.lst_ExistingAccounts = new System.Windows.Forms.ListBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnSelect = new System.Windows.Forms.Button();
+            this.CboAccounts = new System.Windows.Forms.ComboBox();
+            this.btnDeleteAcc = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -140,20 +141,10 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // lst_ExistingAccounts
-            // 
-            this.lst_ExistingAccounts.FormattingEnabled = true;
-            this.lst_ExistingAccounts.ItemHeight = 20;
-            this.lst_ExistingAccounts.Location = new System.Drawing.Point(54, 454);
-            this.lst_ExistingAccounts.Name = "lst_ExistingAccounts";
-            this.lst_ExistingAccounts.Size = new System.Drawing.Size(368, 164);
-            this.lst_ExistingAccounts.TabIndex = 11;
-            this.lst_ExistingAccounts.SelectedIndexChanged += new System.EventHandler(this.lst_ExistingAccounts_SelectedIndexChanged);
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(50, 428);
+            this.label6.Location = new System.Drawing.Point(50, 425);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(139, 20);
             this.label6.TabIndex = 12;
@@ -161,22 +152,42 @@
             // 
             // btnSelect
             // 
-            this.btnSelect.Location = new System.Drawing.Point(151, 644);
+            this.btnSelect.Location = new System.Drawing.Point(150, 500);
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.Size = new System.Drawing.Size(150, 60);
             this.btnSelect.TabIndex = 13;
             this.btnSelect.Text = "Edit Selected Account";
             this.btnSelect.UseVisualStyleBackColor = true;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
+            // 
+            // CboAccounts
+            // 
+            this.CboAccounts.FormattingEnabled = true;
+            this.CboAccounts.Location = new System.Drawing.Point(50, 450);
+            this.CboAccounts.Name = "CboAccounts";
+            this.CboAccounts.Size = new System.Drawing.Size(368, 28);
+            this.CboAccounts.TabIndex = 14;
+            // 
+            // btnDeleteAcc
+            // 
+            this.btnDeleteAcc.Location = new System.Drawing.Point(150, 600);
+            this.btnDeleteAcc.Name = "btnDeleteAcc";
+            this.btnDeleteAcc.Size = new System.Drawing.Size(150, 60);
+            this.btnDeleteAcc.TabIndex = 15;
+            this.btnDeleteAcc.Text = "Delete Account";
+            this.btnDeleteAcc.UseVisualStyleBackColor = true;
+            this.btnDeleteAcc.Click += new System.EventHandler(this.btnDeleteAcc_Click);
             // 
             // frmFinAccManager
             // 
             this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(483, 746);
+            this.ClientSize = new System.Drawing.Size(483, 844);
+            this.Controls.Add(this.btnDeleteAcc);
+            this.Controls.Add(this.CboAccounts);
             this.Controls.Add(this.btnSelect);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.lst_ExistingAccounts);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label5);
@@ -209,8 +220,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.ListBox lst_ExistingAccounts;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnSelect;
+        private System.Windows.Forms.ComboBox CboAccounts;
+        private System.Windows.Forms.Button btnDeleteAcc;
     }
 }
