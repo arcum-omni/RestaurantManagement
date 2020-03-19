@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,21 @@ namespace RestaurantManagement
     /// </summary>
     public class FinancialAccount
     {
+        /// <summary>
+        /// No Arg Constructor
+        /// </summary>
+        public FinancialAccount()
+        {
+        }
+
+        public FinancialAccount(int AccID, string AccName, string AccDesc, decimal AccBal)
+        {
+            AccountId = AccID;
+            AccountName = AccName;
+            AccountDescription = AccDesc;
+            AccountBalance = AccBal;
+        }
+
         /// <summary>
         /// Financial Account Identification Number, Primary Key
         /// </summary>
@@ -35,5 +51,15 @@ namespace RestaurantManagement
         /// The account balance, IE how much money is in the account for a specific purpose.
         /// </summary>
         public decimal AccountBalance { get; private set; }
+
+        /// <summary>
+        /// Override inherited ToString() to provide specific information
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            CultureInfo ci = new CultureInfo("en-us");
+            return $"Account Name: {AccountName}  Acc#: {AccountId}";
+        }
     }
 }

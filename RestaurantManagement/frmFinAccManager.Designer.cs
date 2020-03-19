@@ -37,14 +37,19 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txt_AccBalance = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnCreate = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnSelect = new System.Windows.Forms.Button();
+            this.CboAccounts = new System.Windows.Forms.ComboBox();
+            this.btnDeleteAcc = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(50, 100);
+            this.label1.Location = new System.Drawing.Point(50, 75);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 20);
             this.label1.TabIndex = 0;
@@ -53,15 +58,17 @@
             // txt_AccID
             // 
             this.txt_AccID.Enabled = false;
-            this.txt_AccID.Location = new System.Drawing.Point(225, 97);
+            this.txt_AccID.Location = new System.Drawing.Point(209, 72);
+            this.txt_AccID.Margin = new System.Windows.Forms.Padding(2);
             this.txt_AccID.Name = "txt_AccID";
-            this.txt_AccID.Size = new System.Drawing.Size(197, 26);
+            this.txt_AccID.Size = new System.Drawing.Size(202, 26);
             this.txt_AccID.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(50, 150);
+            this.label2.Location = new System.Drawing.Point(50, 110);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 20);
             this.label2.TabIndex = 2;
@@ -69,15 +76,17 @@
             // 
             // txt_AccName
             // 
-            this.txt_AccName.Location = new System.Drawing.Point(225, 147);
+            this.txt_AccName.Location = new System.Drawing.Point(209, 107);
+            this.txt_AccName.Margin = new System.Windows.Forms.Padding(2);
             this.txt_AccName.Name = "txt_AccName";
-            this.txt_AccName.Size = new System.Drawing.Size(197, 26);
+            this.txt_AccName.Size = new System.Drawing.Size(202, 26);
             this.txt_AccName.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(50, 200);
+            this.label3.Location = new System.Drawing.Point(50, 145);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(156, 20);
             this.label3.TabIndex = 4;
@@ -85,15 +94,17 @@
             // 
             // txt_AccDescription
             // 
-            this.txt_AccDescription.Location = new System.Drawing.Point(225, 197);
+            this.txt_AccDescription.Location = new System.Drawing.Point(209, 142);
+            this.txt_AccDescription.Margin = new System.Windows.Forms.Padding(2);
             this.txt_AccDescription.Name = "txt_AccDescription";
-            this.txt_AccDescription.Size = new System.Drawing.Size(197, 26);
+            this.txt_AccDescription.Size = new System.Drawing.Size(202, 26);
             this.txt_AccDescription.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(50, 250);
+            this.label4.Location = new System.Drawing.Point(50, 180);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(134, 20);
             this.label4.TabIndex = 6;
@@ -101,49 +112,93 @@
             // 
             // txt_AccBalance
             // 
-            this.txt_AccBalance.Location = new System.Drawing.Point(225, 247);
+            this.txt_AccBalance.Location = new System.Drawing.Point(209, 177);
+            this.txt_AccBalance.Margin = new System.Windows.Forms.Padding(2);
             this.txt_AccBalance.Name = "txt_AccBalance";
-            this.txt_AccBalance.Size = new System.Drawing.Size(197, 26);
+            this.txt_AccBalance.Size = new System.Drawing.Size(202, 26);
             this.txt_AccBalance.TabIndex = 7;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(68, 30);
+            this.label5.Location = new System.Drawing.Point(50, 25);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(340, 29);
             this.label5.TabIndex = 8;
             this.label5.Text = "Financial Accounts Manager";
             // 
-            // btnCreate
+            // btnSave
             // 
-            this.btnCreate.Location = new System.Drawing.Point(50, 300);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(150, 50);
-            this.btnCreate.TabIndex = 9;
-            this.btnCreate.Text = "Create";
-            this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnSave.Location = new System.Drawing.Point(70, 231);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(150, 60);
+            this.btnSave.TabIndex = 9;
+            this.btnSave.Text = "Save / Create";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // btnCancel
+            // btnClose
             // 
-            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(272, 300);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(150, 50);
-            this.btnCancel.TabIndex = 10;
-            this.btnCancel.Text = "Create";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnClose.Location = new System.Drawing.Point(252, 231);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(150, 60);
+            this.btnClose.TabIndex = 10;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(50, 356);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(139, 20);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Existing Accounts:";
+            // 
+            // btnSelect
+            // 
+            this.btnSelect.Location = new System.Drawing.Point(70, 429);
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Size = new System.Drawing.Size(150, 60);
+            this.btnSelect.TabIndex = 13;
+            this.btnSelect.Text = "Edit Selected Account";
+            this.btnSelect.UseVisualStyleBackColor = true;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
+            // 
+            // CboAccounts
+            // 
+            this.CboAccounts.FormattingEnabled = true;
+            this.CboAccounts.Location = new System.Drawing.Point(50, 381);
+            this.CboAccounts.Name = "CboAccounts";
+            this.CboAccounts.Size = new System.Drawing.Size(368, 28);
+            this.CboAccounts.TabIndex = 14;
+            // 
+            // btnDeleteAcc
+            // 
+            this.btnDeleteAcc.Location = new System.Drawing.Point(252, 429);
+            this.btnDeleteAcc.Name = "btnDeleteAcc";
+            this.btnDeleteAcc.Size = new System.Drawing.Size(150, 60);
+            this.btnDeleteAcc.TabIndex = 15;
+            this.btnDeleteAcc.Text = "Delete Account";
+            this.btnDeleteAcc.UseVisualStyleBackColor = true;
+            this.btnDeleteAcc.Click += new System.EventHandler(this.btnDeleteAcc_Click);
             // 
             // frmFinAccManager
             // 
-            this.AcceptButton = this.btnCreate;
+            this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(483, 400);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnCreate);
+            this.ClientSize = new System.Drawing.Size(483, 549);
+            this.Controls.Add(this.btnDeleteAcc);
+            this.Controls.Add(this.CboAccounts);
+            this.Controls.Add(this.btnSelect);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txt_AccBalance);
             this.Controls.Add(this.label4);
@@ -153,6 +208,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_AccID);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmFinAccManager";
             this.Text = "Accounts Manager";
             this.Load += new System.EventHandler(this.frmFinAccManager_Load);
@@ -172,7 +228,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_AccBalance;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnCreate;
-        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnSelect;
+        private System.Windows.Forms.ComboBox CboAccounts;
+        private System.Windows.Forms.Button btnDeleteAcc;
     }
 }

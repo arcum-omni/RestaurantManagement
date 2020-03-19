@@ -71,6 +71,12 @@
     <Compile Include="frmHomeScreen.Designer.cs">
       <DependentUpon>frmHomeScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPointOfSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPointOfSale.Designer.cs">
+      <DependentUpon>frmPointOfSale.cs</DependentUpon>
+    </Compile>
     <Compile Include="ItemMatl.cs" />
     <Compile Include="Migrations\202001301907092_AddedTables.cs" />
     <Compile Include="Migrations\202001301907092_AddedTables.Designer.cs">
@@ -103,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmFinAccManager.resx">
       <DependentUpon>frmFinAccManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPointOfSale.resx">
+      <DependentUpon>frmPointOfSale.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202001301907092_AddedTables.resx">
       <DependentUpon>202001301907092_AddedTables.cs</DependentUpon>
